@@ -1,0 +1,7 @@
+.vagrant
+.terraform*
+*.tfstate*
+metal.yaml
+*.pem
+.DS_Store
+terraform.tfvars
