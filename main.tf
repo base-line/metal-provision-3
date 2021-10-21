@@ -40,3 +40,9 @@ resource "metal_ip_attachment" "this" {
   device_id = module.device.id
   cidr_notation = join("/", [cidrhost(module.ip.cidr_notation, 0), "32"])
 }
+
+// enable bgp session
+resource "metal_bgp_session" "this" {
+  device_id      = module.device.id
+  address_family = "ipv4"
+}
